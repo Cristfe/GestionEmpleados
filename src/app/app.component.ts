@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Empleado } from './models/empleado.model'
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GestionEmpleados';
+
+  empleados: Empleado[];
+
+  constructor() {
+    this.empleados = [];
+  }
+
+  onEmpleadoCreado($event) {
+    this.empleados.push($event);
+    console.log(this.empleados);
+  }
 }
+

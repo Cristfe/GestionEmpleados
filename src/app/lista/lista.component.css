@@ -1,0 +1,12 @@
+.empleado {
+    background-color: lightgray;
+    padding: 15px;
+}
+
+.empleado img {
+    width: 100%;
+}
+
+.departamento img {
+    width: 30%;
+}

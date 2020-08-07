@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-3">
+        <img [src}="detalleEmp.imagen" alt="">
+    </div>
+    <div class="col-9">
+        <h3>{{detalleEmp.nombre}} {{detalleEmp.apellidos}}</h3>
+        <p>{{detalleEmp.email}}</p>
+        <div [ngSwitch]="detalleEmp.departamento">
+            <img src="assets/contabilidad.png" *ngSwitchCase="'contabilidad'">
+            <img src="assets/desarrollo.png" *ngSwitchCase="'desarrollo'">
+            <img src="assets/marketing.png" *ngSwitchCase="'marketing'">
+            <img src="assets/direccion.png" *ngSwitchCase="'direccion'">
+        </div>
+    </div>
+</div>
